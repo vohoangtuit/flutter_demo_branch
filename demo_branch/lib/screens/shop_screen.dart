@@ -11,7 +11,7 @@ class _ShopScreenState extends State<ShopScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ShopScreen'),),
+      appBar: AppBar(title: const Text('ShopScreen AAA'),),
     );
   }
 }
