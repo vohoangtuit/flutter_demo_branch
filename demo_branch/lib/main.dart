@@ -1,5 +1,6 @@
 
 import 'package:demo_branch/screens/login_screen.dart';
+import 'package:demo_branch/screens/setting_screen.dart';
 import 'package:demo_branch/screens/shop_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -48,6 +49,11 @@ class _MyHomePageState extends State<MyHomePage> {
             _customButton('Login',(){
               openScreen(context, const LoginScreen());
             })
+            }),
+            const SizedBox(height: 20,),
+            _customButton('Setting',(){
+              openScreen(context, const SettingScreen());
+            }),
 
           ],
         ),
@@ -66,12 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
         width: 150,
         decoration:  const BoxDecoration(
             color: Colors.green,
-            borderRadius:  BorderRadius.only(
-              topLeft:  Radius.circular(40.0),
-              topRight:  Radius.circular(40.0),
+            borderRadius:  BorderRadius.all(
+              Radius.circular(20.0),
             )
         ),
-        child: Text(title,style: const TextStyle(fontSize: 15,color: Colors.white),),
+        child: Center(child: Text(title,style: const TextStyle(fontSize: 15,color: Colors.white),)),
       ),
     );
   }

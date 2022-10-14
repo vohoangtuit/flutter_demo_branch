@@ -9,4 +9,8 @@ class AppString{
   static String vietnam ='Việt Nam';
   static String provinceCity ='Tỉnh/Thành phố';
   static String quanHuyen ='Quận/Huyện';
+
+  static String skip ='Bỏ qua';
+  static String continue_ ='Tiếp tục';
+  static String delete ='Xoá';
 }
