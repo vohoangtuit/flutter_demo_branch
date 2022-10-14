@@ -1,0 +1,7 @@
+
+1: tạo new branch from dev
+2: merge
+- commit code and push
+- đứng từ branch muốn lấy code từ branch khác
+- sau đó merge code chọn  branch cần lấy
+- nếu có conflict thì fix, sau đó push len
