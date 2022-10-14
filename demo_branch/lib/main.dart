@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,14 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,25 +38,41 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+          children:  <Widget>[
+            _customButton('Open Shop',(){
+
+            })
+
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+
+    );
+  }
+  Widget _customButton(String title, VoidCallback onTap){
+    return InkWell(
+      onTap: (){
+        onTap();
+      }
+      ,
+      child: Container(
+        height: 40,
+        width: 150,
+        decoration:  const BoxDecoration(
+            color: Colors.green,
+            borderRadius:  BorderRadius.only(
+              topLeft:  Radius.circular(40.0),
+              topRight:  Radius.circular(40.0),
+            )
+        ),
+        child: Text(title,style: const TextStyle(fontSize: 15,color: Colors.white),),
       ),
     );
   }
+  openScreen(BuildContext context,Widget screen){
+    Navigator.push(context,MaterialPageRoute(builder: (context)=>screen));
+  }
+
 }
