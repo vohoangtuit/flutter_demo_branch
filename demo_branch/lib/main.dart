@@ -1,5 +1,6 @@
 import 'dart:js';
 
+import 'package:demo_branch/screens/shop_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -42,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children:  <Widget>[
             _customButton('Open Shop',(){
-
+              openScreen(context, const ShopScreen());
             })
 
           ],
