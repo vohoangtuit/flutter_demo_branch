@@ -46,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
             _customButton('Open Shop',(){
               openScreen(context, const ShopScreen());
             }),
+            const SizedBox(height: 20,),
             _customButton('Login',(){
               openScreen(context, const LoginScreen());
 
